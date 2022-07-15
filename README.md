@@ -27,6 +27,8 @@ I plan to keep these rules in front of me while I work, or at least until they a
 fswatch lib test | mix test --listen-on-stdin --stale
 ```
 
+I've considered adding formal `git commit` and Dializer steps, but I decided to use them when convenient, for now.  I do plan to regularly run both.
+
 ## Map Generation
 
 My research for this section has involved finding old maps from TradeWars games to study and considering the challenges around using TDD on random generation code.  My thinking and findings are summarized in [this thread](https://elixirforum.com/t/how-best-to-use-tdd-for-random-generation/48620).
