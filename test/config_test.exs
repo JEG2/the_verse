@@ -1,5 +1,5 @@
 defmodule ConfigTest do
-  use ExUnit.Case
+  use TheVerse.GameCase
 
   alias TheVerse.Config
 
@@ -109,14 +109,6 @@ defmodule ConfigTest do
         assert {:error, message} = Config.update(config, limit, value)
         assert String.contains?(message, "a positive integer")
       end)
-    end)
-  end
-
-  @spec build_config(Config.t()) :: Config.t()
-  defp build_config(changes \\ []) do
-    Enum.reduce(changes, Config.default(), fn {setting, value}, config ->
-      {:ok, config} = Config.update(config, setting, value)
-      config
     end)
   end
 end

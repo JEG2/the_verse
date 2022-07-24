@@ -42,6 +42,8 @@ defmodule TheVerse.Config do
   """
   @spec update(t(), atom(), any()) :: {:ok, t()} | {:error, atom(), String.t()}
   def update(config, setting, value) when setting in ~w[x_limit y_limit]a do
+    # errors for the pseudo settings are handled separately, because they
+    # cannot be added to the struct normally
     if is_integer(value) and value >= 0 do
       {min, max} =
         case setting do
