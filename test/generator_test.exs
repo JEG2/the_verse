@@ -17,8 +17,8 @@ defmodule GeneratorTest do
 
     Enum.each(~w[2 3 4 5 6 7], fn neighbor_name ->
       assert %Sector{} = neighbor = Universe.locate(universe, neighbor_name)
-      assert neighbor.name in Sector.neighbors(one)
-      assert one.name in Sector.neighbors(neighbor)
+      assert neighbor.name in Sector.available_connections(one)
+      assert one.name in Sector.available_connections(neighbor)
     end)
   end
 end

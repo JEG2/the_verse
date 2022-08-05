@@ -46,18 +46,12 @@ defmodule TheVerse.Universe do
     }
   end
 
-  def connect(universe, from_name_or_xy, direction, to_name_or_xy) do
+  def connect(universe, from_name_or_xy, dir, to_name_or_xy) do
     from = locate(universe, from_name_or_xy)
     to = locate(universe, to_name_or_xy)
 
-    if is_binary(Map.fetch!(from.neighbors, direction)) do
-      raise "Existing connection"
-    end
-
-    neighbors = Map.put(from.neighbors, direction, to.name)
-    from = Map.put(from, :neighbors, neighbors)
+    from = Sector.connect(from, dir, to)
     sectors = Map.put(universe.sectors, from.name, from)
-
     %__MODULE__{universe | sectors: sectors}
   end
 

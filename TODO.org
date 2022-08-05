@@ -1,0 +1,16 @@
+* TODO Modify process to handle nested feature development
+* TODO Document code conventions
+** TODO Weird names for non-diegetics like Dir and XY
+*** https://bxpcast.com/category/podcast-episodes/page/8/
+*** https://www.merriam-webster.com/dictionary/diegesis
+*** https://www.google.com/search?q=diegetic+define&oq=diegetic&aqs=chrome.0.0i67j69i57j0i67i433j0i67j0i512l2j0i20i263i512j0i512j0i67j0i512.5828j1j7&sourceid=chrome&ie=UTF-8
+** TODO Only aliasing modules used in code (not types)
+* TODO Fix separate error handling in Config
+* TODO Elevate Generator to a top-level context
+* TODO Catch up tests from nesting
+* TODO Catch up types and docs
+* TODO Decide what to do with TheVerse module
+* TODO DRY up direction knowledge
+* TODO Finish base map generation code
+* TODO Build map visualizer
+* TODO Implement randomness testing methods from Elixir Forum thread

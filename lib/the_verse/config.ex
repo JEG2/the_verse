@@ -25,7 +25,9 @@ defmodule TheVerse.Config do
             max_y: 100
 
   @doc ~S"""
-  Returns a baseline configuration which can be modified to taste.
+  Returns a baseline configuration which can be modified to taste.  Always start
+  here and avoid manually building `Config` structs, you can operate knowing all
+  `Config`s are valid.
   """
   @spec default() :: t()
   def default, do: %__MODULE__{}
